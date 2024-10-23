@@ -3,6 +3,7 @@ import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import typescript from '@rollup/plugin-typescript';
 import dts from 'rollup-plugin-dts';
+import terser from '@rollup/plugin-terser'
 
 export default [
     // Main bundle
@@ -12,12 +13,14 @@ export default [
             {
                 file: 'dist/index.js',
                 format: 'cjs',
-                sourcemap: true
+                sourcemap: true,
+                plugins: [terser()]
             },
             {
                 file: 'dist/index.mjs',
                 format: 'es',
-                sourcemap: true
+                sourcemap: true,
+                plugins: [terser()]
             }
         ],
         plugins: [
