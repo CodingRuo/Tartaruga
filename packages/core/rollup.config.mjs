@@ -1,9 +1,10 @@
-// rollup.config.mjs
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import typescript from '@rollup/plugin-typescript';
 import dts from 'rollup-plugin-dts';
 import terser from '@rollup/plugin-terser'
+import cleanup from 'rollup-plugin-cleanup'
+import filesize from 'rollup-plugin-filesize'
 
 export default [
     // Main bundle
@@ -24,6 +25,8 @@ export default [
             }
         ],
         plugins: [
+            cleanup(),
+            filesize(),
             resolve(),
             commonjs(),
             typescript({
