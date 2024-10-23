@@ -1,0 +1,27 @@
+{
+  "name": "tartaruga",
+  "version": "0.0.0",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "framework",
+    "web",
+    "development",
+    "backend",
+    "nodejs",
+    "typescript"
+  ],
+  "scripts": {
+    "dev": "rollup -c -w",
+    "test": "jest",
+    "clean": "rimraf dist",
+    "build": "npm run clean && rollup -c"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

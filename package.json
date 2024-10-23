@@ -1,0 +1,28 @@
+{
+  "name": "tartaruga-project",
+  "private": true,
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "dev": "npm run dev --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "clean": "npm run clean --workspaces --if-present"
+  },
+  "keywords": [],
+  "author": "René Schober <r.schober@outlook.com> (https://t2rtl3.dev/)",
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {
+    "@rollup/plugin-commonjs": "^28.0.1",
+    "@rollup/plugin-node-resolve": "^15.3.0",
+    "@rollup/plugin-typescript": "^12.1.1",
+    "@types/node": "^22.7.9",
+    "rollup": "^4.24.0",
+    "rollup-plugin-dts": "^6.1.1",
+    "tslib": "^2.8.0",
+    "typescript": "^5.6.3"
+  },
+  "devDependencies": {
+    "rimraf": "^6.0.1"
+  }
+}
